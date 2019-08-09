@@ -1,7 +1,6 @@
 #!/bin/bash
 i=0
-host="localhost"
-port=80
+
 if [[ "$1" == "" ]]; then
     echo "Usage:"
     echo "$0 <host> <port> [-a]"
