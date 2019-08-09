@@ -1,4 +1,4 @@
-# microservice
+# microtest
 
 Also available on Docker Hub: https://hub.docker.com/r/kellybrazil/microtest
 
