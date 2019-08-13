@@ -7,7 +7,7 @@ This is a very simple web server that simulates a microservice. It replies with 
 hostname: 04909ed3d467   ip: 172.17.0.3   remote: 172.17.0.1   time: Fri Aug  9 16:17:39 2019   path: /request_number_65
 ```
 
-If the client request uses the `POST` method instead of `GET`, the output will be Content-Type application/json and serialized in JSON:
+If the client request uses the `POST` method instead of `GET`, the output will be `Content-Type: application/json` and serialized in JSON:
 ```
 {"hostname": "04909ed3d467", "ip": "172.17.0.3", "remote": "172.17.0.1", "time": "Fri Aug  9 16:19:13 2019", "path": "/request_number_100"}
 ```
