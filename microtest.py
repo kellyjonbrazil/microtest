@@ -5,7 +5,7 @@ import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 host_name = ''
-host_port = 5000
+host_port = 8080
 
 class MyServer(BaseHTTPRequestHandler):
     server_name = socket.gethostname()

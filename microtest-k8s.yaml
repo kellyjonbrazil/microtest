@@ -1,32 +1,35 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app
+  name: microtest
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: microtest
   template:
     metadata:
       labels:
-        app: webapp
+        app: microtest
     spec:
       containers:
         - name: microtest
           image: kellybrazil/microtest
           ports:
-            - containerPort: 5000
+            - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: webapp
-  name: web-app
+    app: microtest
+  name: microtest
 spec:
   externalTrafficPolicy: Local
   ports:
     - port: 80
-      targetPort: 5000
+      targetPort: 8080
   selector:
-    app: webapp
+    app: microtest
   sessionAffinity: None
   type: LoadBalancer

@@ -1,7 +1,7 @@
 # Dockerfile for microservice test server
 
 # run as:
-# docker run -d --rm -p 5000:5000 microtest
+# docker run -d --rm -p 8080:8080 kellybrazil/microtest
 
 FROM python:3.7-alpine
 
@@ -11,4 +11,4 @@ COPY microtest.py /app
 
 WORKDIR /app
 
-CMD [ "python", "./microtest.py" ]
+CMD [ "python", "-u", "./microtest.py" ]
