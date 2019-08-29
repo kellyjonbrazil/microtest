@@ -13,8 +13,8 @@ while true;
 do
     ((i++))
     if [[ "$3" == "-a" ]]; then
-        curl -s -X POST "$1":"$2"/request_number_"$i" | jq .
+        curl --connect-timeout 5 --max-time 7 -s -X POST "$1":"$2"/request_number_"$i" | jq .
     else
-        curl "$1":"$2"/request_number_"$i"
+        curl --connect-timeout 5 --max-time 7 "$1":"$2"/request_number_"$i"
     fi
 done
